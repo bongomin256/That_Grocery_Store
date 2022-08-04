@@ -1,6 +1,14 @@
+:root {
+  --button_color: rgb(17, 109, 74);
+  --button_color_hover:  rgb(17, 109, 74, 0.5);
+}
+
 * {
   box-sizing: border-box;
 }
+
+
+/* ------------------ STARTING HTML ELEMENT STYLING ------------------ */
 
 a {
   color: black;
@@ -10,17 +18,20 @@ a {
   align-items: center;
 }
 
-a:hover {
+li > a:hover {
   color: forestgreen;
   text-decoration: underline;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 ul {
+  display: flex;
   list-style-type: disc;
   align-self: flex-end;
   align-items: center;
 }
+
+/* ------------------ STARTING CLASS BASED CSS STYLING ------------------ */
 
 .flex-row {
   display: flex;
@@ -30,9 +41,39 @@ ul {
   align-items: center;
 }
 
-
+/* ------------------ STARTING CUSTOM CLASSES ------------------ */
 
 .navItem {
   margin-left: 20px;
   margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fakeButton {
+  display: flex;
+  background-color: var(--button_color);
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px green;
+  width: 300px;
+  height: 50px;
+  align-items: center; /* vertical center w/ display: flex*/
+  justify-content: center; /* horizontal center w/ display: flex*/
+}
+
+.fakeButton:hover {
+  background-color: var(--button_color_hover);
+  text-shadow: 1px 1px 1px white;
+}
+
+.fakeButton > a:hover {
+  color: black;
+}
+
+.hover_1:hover {
+  color: forestgreen;
+  text-decoration: underline;
+  font-weight: bolder;
 }

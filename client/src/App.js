@@ -14,7 +14,7 @@ import Home from "./pages/Home";
 
 import Nav from "./components/Nav";
 
-/* -----------------------------------------------------------------
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -40,15 +40,12 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
---------------------------------------------------------------------- */
-
 function App() {
   return (
-    // <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Nav />
-          <p>MAIN SITE</p>
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -56,10 +53,9 @@ function App() {
               <Route path="/signup" element={<Signup />} />
             </Routes>
           </div>
-          {/* <Footer /> */}
         </div>
       </Router>
-    // </ApolloProvider>
+    </ApolloProvider>
   );
 }
 
