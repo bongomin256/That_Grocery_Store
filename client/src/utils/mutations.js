@@ -19,11 +19,11 @@ export const ADD_ORDER = gql`
         _id
         name
         expirationDate
-        // price
+        price
         quantity
-        category {
-          name
-        }
+        // category {
+        //   name
+        // }
       }
     }
   }
