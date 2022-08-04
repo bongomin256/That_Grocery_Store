@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 function Nav() {
     return (
         <div className="flex-row">
-        <h1>                    
+        <h1 className='hover_1'>                    
             <Link to="/">
-                That Grocery Store
+                THAT GROCERY STORE
             </Link>
         </h1>
 
