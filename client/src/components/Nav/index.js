@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom';
 function Nav() {
     return (
         <div className="flex-row">
-        <h1>MAIN TITLE HERE</h1>
+        <h1>                    
+            <Link to="/">
+                That Grocery Store
+            </Link>
+        </h1>
 
 
             <ul className="flex-row">
