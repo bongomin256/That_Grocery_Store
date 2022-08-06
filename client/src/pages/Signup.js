@@ -3,16 +3,12 @@ import React, { useState } from "react";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
 
-function Signup(props) {
-  const [formState, setFormState] = useState({
-    email: "",
-    password: "",
-  });
+function Signup() {
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
 
   const form_Handler = async (event) => {
     event.preventDefault();
-
     const mutationResponse = await addUser({
       variables: {
         email: formState.email,
