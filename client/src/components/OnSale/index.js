@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { useStoreContext } from '../../utils/GlobalState';
-import { UPDATE_PRODUCTS } from '../../utils/actions';
-import { useQuery } from '@apollo/client';
-import { QUERY_ALL_PRODUCTS } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
+import { useStoreContext } from "../../utils/GlobalState";
+import { UPDATE_PRODUCTS } from "../../utils/actions";
+import { useQuery } from "@apollo/client";
+import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
+import { idbPromise } from "../../utils/helpers";
 
 function OnSale() {
   const [state, dispatch] = useStoreContext();
+  // const [state, setState] = useState({ products: [] });
 
   const { currentCategory } = state;
 
@@ -20,10 +21,10 @@ function OnSale() {
         products: data.products,
       });
       data.products.forEach((product) => {
-        idbPromise('products', 'put', product);
+        idbPromise("products", "put", product);
       });
     } else if (!loading) {
-      idbPromise('products', 'get').then((products) => {
+      idbPromise("products", "get").then((products) => {
         dispatch({
           type: UPDATE_PRODUCTS,
           products: products,
@@ -54,7 +55,6 @@ function OnSale() {
       ) : (
         <h3>You haven't added any products yet!</h3>
       )}
-
     </div>
     // <div>
     //   {state.products.length ? (

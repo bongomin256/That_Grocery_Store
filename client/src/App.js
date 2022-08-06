@@ -14,8 +14,7 @@ import Home from "./pages/Home";
 import Market from "./pages/Market";
 
 import Nav from "./components/Nav";
-
-
+import { StoreProvider } from "./utils/GlobalState";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -44,19 +43,21 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Nav />
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/market" element={<Market />} />
-            </Routes>
+      <StoreProvider>
+        <Router>
+          <div className="flex-column justify-flex-start min-100-vh">
+            <Nav />
+            <div className="container">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/market" element={<Market />} />
+              </Routes>
+            </div>
           </div>
-        </div>
-      </Router>
+        </Router>
+      </StoreProvider>
     </ApolloProvider>
   );
 }
