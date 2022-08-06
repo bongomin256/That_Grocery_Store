@@ -17,8 +17,8 @@ function Signup() {
         quantity: formState.quantity,
       },
     });
-    const token = mutationResponse.data.addUser.token;
-    auth.login(token);
+    // const token = mutationResponse.data.addUser.token;
+    // auth.login(token);
   };
 
   const formChange_Handler = (event) => {
@@ -31,7 +31,7 @@ function Signup() {
 
   return (
     <div>
-      <h2>THIS IS THE SIGNUP PAGE</h2>
+      <h2>Selling Greens</h2>
 
       <form onSubmit={form_Handler}>
         <div>
