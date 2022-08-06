@@ -28,6 +28,7 @@ const typeDefs = gql`
     gardenAddress: String
     email: String
     orders: [Order]
+    products: [Product]
   }
 
   type Checkout {
