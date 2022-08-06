@@ -114,6 +114,8 @@ db.once("open", async () => {
 
   console.log("products seeded");
 
+  await User.deleteMany();
+
   await User.create({
     firstName: "Peter",
     lastName: "Griffin",
@@ -125,6 +127,14 @@ db.once("open", async () => {
         products: [products[0]._id, products[0]._id, products[1]._id],
       },
     ],
+  });
+
+  await User.create({
+    firstName: "Chris",
+    lastName: "Griffin",
+    gardenAddress: "Seattle",
+    email: "chris@test.com",
+    password: "password",
   });
 
   console.log("users seeded");
