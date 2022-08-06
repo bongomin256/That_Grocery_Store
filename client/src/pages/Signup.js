@@ -1,11 +1,27 @@
 import { useMutation } from '@apollo/client';
 import React, { useState } from 'react';
 import auth from '../utils/auth';
-// import { LOGIN } from '../utils/mutations';
+import { ADD_USER } from '../utils/mutations';
 
-function Signup() {
+function Signup(props) {
 
     const [formState, setFormState] = useState({email: '', password: ''});
+    const [addUser] = useMutation(ADD_USER);
+
+    const form_Handler = async (event) => {
+        event.preventDefault();
+        const mutationResponse = await addUser({
+            variables: {
+                email: formState.email,
+                password: formState.password,
+                firstName: formState.firstName,
+                lastName: formState.lastName,
+                gardenAddress: formState.gardenAddress,
+            },
+        });
+        const token = mutationResponse.data.addUser.token;
+        auth.login(token);
+    }
 
     const formChange_Handler = (event) => {
         const {name, value} = event.target;
@@ -19,8 +35,7 @@ function Signup() {
         <div>
             <h2>THIS IS THE SIGNUP PAGE</h2>
 
-            <form>
-            {/* <form onSubmit={form_Handler}> */}
+            <form onSubmit={form_Handler}>
                 <div>
                     <label htmlFor="email">First Name:</label>
                     <input 
@@ -62,20 +77,15 @@ function Signup() {
                     />
                 </div>
                 <div>
-                <label htmlFor="c_password">Password:</label>
+                <label htmlFor="gardenAddress">Garden Address:</label>
                     <input 
-                        placeholder='Confirm Password...'
-                        name='c_password'
-                        type='password'
-                        id='c_password'
+                        placeholder='1234 Jane Doe Lane'
+                        name='gardenAddress'
+                        type='gardenAddress'
+                        id='gardenAddress'
                         onChange={formChange_Handler}
                     />
                 </div>
-                {/* {error ? (
-                    <div>
-                        <p>Incorrect Login Information</p>
-                    </div>
-                ): null} */}
                 <div>
                     <button type='submit'>SUBMIT</button>
                 </div>
