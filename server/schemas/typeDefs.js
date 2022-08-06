@@ -21,6 +21,7 @@ const typeDefs = gql`
     lastName: String
     gardenAddress: String
     email: String
+    password: String
     orders: [Order]
     products: [Product]
   }
