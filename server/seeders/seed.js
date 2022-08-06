@@ -132,7 +132,7 @@ db.once("open", async () => {
   await User.create({
     firstName: "Chris",
     lastName: "Griffin",
-    gardenAddress: "Seattle",
+    gardenAddress: "Seattle1",
     email: "chris@test.com",
     password: "password",
   });
