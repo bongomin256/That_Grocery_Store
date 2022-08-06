@@ -16,6 +16,12 @@ const Home = () => {
                         BUY YOUR GREENS
                     </h3>
                 </Link>
+
+                <Link to="/market">
+                    <h3 className='fakeButton'>
+                        VIEW ALL GREENS
+                    </h3>
+                </Link>
             </div>
             <h3>
                 WHO WE ARE:
