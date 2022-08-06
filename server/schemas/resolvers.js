@@ -11,7 +11,7 @@ const resolvers = {
     // categories: async () => {
     //   return await Category.find();
     // },
-    products: async (parent, { category, name }) => {
+    products: async (parent, { name }) => {
       const params = {};
 
       //   if (category) {
