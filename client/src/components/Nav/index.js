@@ -34,29 +34,29 @@ function Nav() {
   };
 
   return (
+  <div>
+      <div id="NAV_COMPONENT" className="flex-row justify-content-between">
+        <h1 className="hover_1 col-7 text-center">
+          <Link to="/">THAT GROCERY STORE</Link>
+        </h1>
 
-    <div id="NAV_COMPONENT" className="flex-row justify-content-between">
-      <h1 className="hover_1 col-7 text-center">
-        <Link to="/">THAT GROCERY STORE</Link>
-      </h1>
+        <ul className="flex-row col-3">
+          <li className="navItem">
+            <Link to="/login">Login</Link>
+          </li>
+          <li className="navItem">
+            <Link to="/signup">Signup</Link>
+          </li>
+        </ul>
+      </div>
 
-      <ul className="flex-row col-3">
-        <li className="navItem">
-          <Link to="/login">Login</Link>
-        </li>
-        <li className="navItem">
-          <Link to="/signup">Signup</Link>
-        </li>
-      </ul>
-    </div>
-
-    <header className="flex-row">
-      <h1 className="hover_1">
-        <Link to="/">THAT GROCERY STORE</Link>
-      </h1>
-      <nav>{showNavigation()}</nav>
-    </header>
-
+      <header className="flex-row">
+        <h1 className="hover_1">
+          <Link to="/">THAT GROCERY STORE</Link>
+        </h1>
+        <nav>{showNavigation()}</nav>
+      </header>
+  </div>
   );
 }
 
