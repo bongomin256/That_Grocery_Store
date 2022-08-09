@@ -1,4 +1,4 @@
-export function puralize(name, count) {
+export default function puralize(name, count) {
   if (count === 1) {
     return;
   }

@@ -1,7 +1,10 @@
-import { useMutation } from "@apollo/client";
-import React, { useState } from "react";
-import auth from "../../utils/auth";
-import { QUERY_ALL_PRODUCTS } from "../../utils/mutations";
+import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
+import React, { useEffect } from "react";
+import { useStoreContext } from "../../utils/GlobalState";
+import { UPDATE_PRODUCTS } from "../../utils/actions";
+import { useQuery } from "@apollo/client";
+
+import { idbPromise } from "../../utils/helpers";
 
 function ProductDetails() {
   const [state, dispatch] = useStoreContext();
