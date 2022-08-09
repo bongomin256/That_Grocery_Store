@@ -1,25 +1,24 @@
 import { useMutation } from "@apollo/client";
 import React, { useState } from "react";
-import Auth from "../utils/auth";
-import { ADD_USER } from "../utils/mutations";
+import auth from "../utils/auth";
+import { ADD_ORDER } from "../utils/mutations";
 
 function Signup() {
   const [formState, setFormState] = useState({ email: "", password: "" });
-  const [addUser] = useMutation(ADD_USER);
+  const [addOrder] = useMutation(ADD_ORDER);
 
   const form_Handler = async (event) => {
     event.preventDefault();
-    const mutationResponse = await addUser({
+    const mutationResponse = await addOrder({
       variables: {
-        email: formState.email,
-        password: formState.password,
-        firstName: formState.firstName,
-        lastName: formState.lastName,
-        gardenAddress: formState.gardenAddress,
+        name: formState.name,
+        expirationDate: formState.expirationDate,
+        price: formState.price,
+        quantity: formState.quantity,
       },
     });
-    const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
+    // const token = mutationResponse.data.addUser.token;
+    // auth.login(token);
   };
 
   const formChange_Handler = (event) => {
@@ -32,16 +31,16 @@ function Signup() {
 
   return (
     <div>
-      <h2>THIS IS THE SIGNUP PAGE</h2>
+      <h2>Selling Greens</h2>
 
       <form onSubmit={form_Handler}>
         <div>
           <label htmlFor="email">First Name:</label>
           <input
             placeholder="John"
-            name="firstName"
-            type="firstName"
-            id="firstName"
+            name="f_name"
+            type="f_name"
+            id="f_name"
             onChange={formChange_Handler}
           />
         </div>
@@ -49,9 +48,9 @@ function Signup() {
           <label htmlFor="password">Last Name:</label>
           <input
             placeholder="Doe"
-            name="lastName"
-            type="lastName"
-            id="lastName"
+            name="l_name"
+            type="l_name"
+            id="l_name"
             onChange={formChange_Handler}
           />
         </div>
