@@ -55,6 +55,18 @@ input {
 
 /* ------------------ STARTING CUSTOM CLASSES ------------------ */
 
+.banner_1 {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  background-color: rgba(12, 80, 54, 0.5);
+}
+
+.no_padding {
+  padding: 0px;
+  margin: 0px;
+}
+
 .navItem {
   margin-left: 20px;
   margin-right: 20px;
