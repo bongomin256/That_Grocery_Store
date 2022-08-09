@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect } from "react";
+import ProductItem from "../ProductItem";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 
-function OnSale() {
+function ProductList() {
   const [state, dispatch] = useStoreContext();
-  // const [state, setState] = useState({ products: [] });
 
   const { currentCategory } = state;
 
@@ -49,25 +48,21 @@ function OnSale() {
       {state.products.length ? (
         <div className="flex-row">
           {filterProducts().map((product) => (
-            <p key={product.name}>{product.name}</p>
+            <ProductItem
+              key={product._id}
+              _id={product._id}
+              image={product.image}
+              name={product.name}
+              price={product.price}
+              quantity={product.quantity}
+            />
           ))}
         </div>
       ) : (
         <h3>You haven't added any products yet!</h3>
       )}
     </div>
-    // <div>
-    //   {state.products.length ? (
-    //     <div className="flex-row">
-    //       {filterProducts().map((product) => (
-    //         <p key={product._id}>{product._id}</p>
-    //       ))}
-    //     </div>
-    //   ) : (
-    //     <h3>You haven't added any products yet!</h3>
-    //   )}
-    // </div>
   );
 }
 
-export default OnSale;
+export default ProductList;

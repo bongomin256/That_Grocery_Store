@@ -13,6 +13,11 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Market from "./pages/Market";
 
+import AddProducts from "./pages/AddProducts";
+import ProductDetails from "./pages/ProductDetails";
+import Profile from "./pages/Profile";
+
+
 import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 
@@ -45,14 +50,19 @@ function App() {
     <ApolloProvider client={client}>
       <StoreProvider>
         <Router>
-          <div className="flex-column justify-flex-start min-100-vh">
+          <div className="d-flex row no_padding justify-content-center align-items-center">
             <Nav />
-            <div className="container">
+            <div className="d-flex row justify-content-center">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/market" element={<Market />} />
+
+                <Route path="/addproducts" element={<AddProducts />} />
+                <Route path="/productdetails" element={<ProductDetails />} />
+                <Route path="/profile" element={<Profile />} />
+
               </Routes>
             </div>
           </div>

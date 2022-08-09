@@ -2,14 +2,14 @@ const db = require("../config/connection");
 const { User, Product, Order } = require("../models");
 
 db.once("open", async () => {
-  //   await Category.deleteMany();
+  await Category.deleteMany();
 
-  //   const categories = await Category.insertMany([
-  //     { name: "vegetables" },
-  //     { name: "fruits" },
-  //   ]);
+  const categories = await Category.insertMany([
+    { name: "vegetables" },
+    { name: "fruits" },
+  ]);
 
-  //   console.log("categories seeded");
+  console.log("categories seeded");
 
   await Product.deleteMany();
 
@@ -18,97 +18,109 @@ db.once("open", async () => {
       name: "carrot",
       description: "fresh organic multi colored carrots",
       image: "carrot.jpg",
-      //   category: categories[0]._id,
+      category: categories[0]._id,
       price: 2.99,
       quantity: 500,
+      user: User[0]._id
     },
     {
       name: "onion",
       description: "Fresh Organic Red Onion",
       image: "redOnion.jpg",
-      //   category: categories[0]._id,
+      category: categories[0]._id,
       price: 1.99,
       quantity: 500,
+      user: User[0]._id
     },
     {
       name: "cabbage",
-      //   category: categories[0]._id,
+      category: categories[0]._id,
       description: "fresh organic head of cabbage",
       image: "cabbage.jpg",
       price: 7.99,
       quantity: 20,
+      user: User[1]._id
     },
     {
       name: "basil",
-      //   category: categories[0]._id,
+      category: categories[0]._id,
       description: "Bundles of fresh organic basil leaves",
       image: "basil.jpg",
       price: 3.99,
       quantity: 50,
+      user: User[1]._id
     },
     {
       name: "celery",
-      //   category: categories[0]._id,
+      category: categories[0]._id,
       description: "bundles of fresh organic Celery",
       image: "celery.jpg",
       price: 14.99,
       quantity: 100,
+      user: User[0]._id
     },
     {
       name: "apple",
-      //   category: categories[1]._id,
+      category: categories[1]._id,
       description: "Fresh Organic Honeycrisp Apples",
       image: "apple.jpg",
       price: 2.99,
       quantity: 30,
+      user: User[0]._id
     },
     {
       name: "strawberries",
-      //   category: categories[1]._id,
+      category: categories[1]._id,
       description: "fresh organic box of strawberries",
       image: "strawberries.jpg",
       price: 2.99,
       quantity: 30,
+      user: User[0]._id
     },
     {
       name: "corn",
-      //   category: categories[0]._id,
+      category: categories[0]._id,
       description: "fresh organic ears of golden corn",
       image: "corn.jpg",
       price: 1.99,
       quantity: 300,
+      user: User[1]._id
     },
     {
       name: "oranges",
-      //   category: categories[1]._id,
+      category: categories[1]._id,
       description: "fresh organic Navel oranges",
       image: "orange.jpg",
       price: 1.99,
       quantity: 1000,
+      user: User[1]._id
     },
     {
       name: "pumpkin",
-      //   category: categories[1]._id,
+      category: categories[1]._id,
       description: "fresh organic Pumpkins",
       image: "pumkin.jpg",
       price: 9.99,
       quantity: 1000,
+      user: User[1]._id
     },
     {
       name: "potato",
-      //   category: categories[0]._id,
+      category: categories[0]._id,
       description: "fresh organic russet potato",
       image: "potato.jpg",
       price: 1.99,
       quantity: 100,
+      user: User[0]._id
     },
     {
       name: "tomato",
-      //   category: categories[1]._id,
+      category: categories[1]._id,
       description: "Fresh organic Heirloom tomato",
       image: "tomato.jpg",
       price: 2.99,
       quantity: 600,
+      user: User[0]._id
     },
   ]);
 
@@ -137,7 +149,7 @@ db.once("open", async () => {
     password: "password",
   });
 
-  console.log("users seeded");
+  console.log("User seeded");
 
   process.exit();
 });

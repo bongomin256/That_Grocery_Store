@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-
+import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
+import React, { useEffect } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useQuery } from "@apollo/client";
-import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
+
 import { idbPromise } from "../../utils/helpers";
 
-function OnSale() {
+function ProductDetails() {
   const [state, dispatch] = useStoreContext();
   // const [state, setState] = useState({ products: [] });
 
@@ -44,30 +44,38 @@ function OnSale() {
   }
 
   return (
-    <div className="my-2">
-      <h2>Our Products:</h2>
-      {state.products.length ? (
-        <div className="flex-row">
-          {filterProducts().map((product) => (
-            <p key={product.name}>{product.name}</p>
-          ))}
+    <div>
+      <form>
+        <div>
+          <label htmlFor="product">PRODUCT NAME:</label>
+          <input
+            placeholder="Product Name"
+            name="product"
+            type="product"
+            id="product"
+          />
         </div>
-      ) : (
-        <h3>You haven't added any products yet!</h3>
-      )}
+        <div>
+          <label htmlFor="expirationDate">EXPIRATION DATE:</label>
+          <input
+            placeholder="Expiration Date"
+            name="expirationDate"
+            type="expirationDate"
+            id="expirationDate"
+          />
+        </div>
+        <div>
+          <label htmlFor="quantity">QUANTITY:</label>
+          <input
+            placeholder="quantity"
+            name="quantity"
+            type="quantity"
+            id="quantity"
+          />
+        </div>
+      </form>
     </div>
-    // <div>
-    //   {state.products.length ? (
-    //     <div className="flex-row">
-    //       {filterProducts().map((product) => (
-    //         <p key={product._id}>{product._id}</p>
-    //       ))}
-    //     </div>
-    //   ) : (
-    //     <h3>You haven't added any products yet!</h3>
-    //   )}
-    // </div>
   );
 }
 
-export default OnSale;
+export default ProductDetails;
