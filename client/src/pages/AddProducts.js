@@ -4,8 +4,7 @@ import AddProducts from "../components/AddProducts";
 
 const SellingGreens = () => {
   return (
-    <div>
-      <h1>SELLING GREENS:</h1>
+    <div className="d-flex row justify-content-center align-items-center">
       <AddProducts />
     </div>
   );

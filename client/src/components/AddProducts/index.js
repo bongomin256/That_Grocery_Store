@@ -30,41 +30,46 @@ function AddProducts() {
   };
 
   return (
-    <div>
+    <div className="col-md-6 form_container container">
+      <h2 className="d-flex row justify-content-center align-items-center">
+        SELLING GREENS:
+      </h2>
       <form onSubmit={form_Handler}>
-        <div>
-          <label htmlFor="product">PRODUCT NAME:</label>
-          <input
-            placeholder="Product Name"
-            name="product"
-            type="product"
-            id="product"
-            onChange={formChange_Handler}
-          />
-        </div>
-        <div>
-          <label htmlFor="expirationDate">EXPIRATION DATE:</label>
-          <input
-            placeholder="Expiration Date"
-            name="expirationDate"
-            type="expirationDate"
-            id="expirationDate"
-            onChange={formChange_Handler}
-          />
-        </div>
-        <div>
-          <label htmlFor="quantity">QUANTITY:</label>
-          <input
-            placeholder="quantity"
-            name="quantity"
-            type="quantity"
-            id="quantity"
-            onChange={formChange_Handler}
-          />
-        </div>
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="product">PRODUCT NAME: </label>
+            <input
+              placeholder="Product Name"
+              name="product"
+              type="product"
+              id="product"
+              onChange={formChange_Handler}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="expirationDate">EXPIRATION DATE: </label>
+            <input
+              placeholder="Expiration Date"
+              name="expirationDate"
+              type="expirationDate"
+              id="expirationDate"
+              onChange={formChange_Handler}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="quantity">QUANTITY: </label>
+            <input
+              placeholder="quantity"
+              name="quantity"
+              type="quantity"
+              id="quantity"
+              onChange={formChange_Handler}
+            />
+          </div>
 
-        <div>
-          <button type="submit">POST GREEN</button>
+          <div className="row justify-content-center m-2">
+            <button type="submit">POST GREEN</button>
+          </div>
         </div>
       </form>
     </div>

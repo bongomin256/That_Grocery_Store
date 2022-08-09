@@ -48,9 +48,9 @@ function App() {
     <ApolloProvider client={client}>
       <StoreProvider>
         <Router>
-          <div className="flex-column justify-flex-start min-100-vh">
+          <div className="d-flex row no_padding justify-content-center align-items-center">
             <Nav />
-            <div className="container">
+            <div className="d-flex row justify-content-center">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
