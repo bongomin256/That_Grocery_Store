@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
-      <div className="flex-row">
+    <div className="row">
+      <div className="flex-row banner_1 align-self-center no_padding">
         <Link to="/addproducts">
           <h3 className="fakeButton">SELL YOUR GREENS</h3>
         </Link>
