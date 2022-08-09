@@ -49,7 +49,7 @@ function OnSale() {
       {state.products.length ? (
         <div className="flex-row">
           {filterProducts().map((product) => (
-            <p key={product._id}>{product._id}</p>
+            <p key={product.name}>{product.name}</p>
           ))}
         </div>
       ) : (
