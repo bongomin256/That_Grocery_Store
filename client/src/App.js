@@ -13,6 +13,11 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Market from "./pages/Market";
 
+import AddProducts from "./pages/AddProducts";
+import ProductDetails from "./pages/ProductDetails";
+import Profile from "./pages/Profile";
+
+
 import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 
@@ -53,6 +58,11 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/market" element={<Market />} />
+
+                <Route path="/addproducts" element={<AddProducts />} />
+                <Route path="/productdetails" element={<ProductDetails />} />
+                <Route path="/profile" element={<Profile />} />
+
               </Routes>
             </div>
           </div>
