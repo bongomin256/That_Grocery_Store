@@ -32,9 +32,10 @@ function Signup() {
 
   return (
     <div className='d-flex row justify-content-center align-items-center'>
-      <h2>THIS IS THE SIGNUP PAGE</h2>
 
-      <div className='col-md-6 form_container container'>
+      <div className='col-md-4 form_container container'>
+      <div className='form_title'>SIGNUP</div>
+      <hr></hr>
         <form onSubmit={form_Handler} className='container row align-items-center'>
           <div className='form-row'>
             <div className='form-group'>
