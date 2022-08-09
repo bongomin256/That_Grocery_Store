@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <div className="flex-row">
-        <Link to="/login">
+        <Link to="/addproducts">
           <h3 className="fakeButton">SELL YOUR GREENS</h3>
         </Link>
 
