@@ -1,33 +1,44 @@
 import { useMutation } from "@apollo/client";
 import React, { useState } from "react";
 import auth from "../../utils/auth";
-import { ADD_ORDER } from "../../utils/mutations";
+import { QUERY_ALL_PRODUCTS } from "../../utils/mutations";
 
 function ProductDetails() {
-  const [formState, setFormState] = useState({ email: "", password: "" });
-  const [addOrder] = useMutation(ADD_ORDER);
+  const [state, dispatch] = useStoreContext();
+  // const [state, setState] = useState({ products: [] });
 
-  const form_Handler = async (event) => {
-    event.preventDefault();
-    const mutationResponse = await addOrder({
-      variables: {
-        name: formState.name,
-        expirationDate: formState.expirationDate,
-        price: formState.price,
-        quantity: formState.quantity,
-      },
-    });
-    // const token = mutationResponse.data.addUser.token;
-    // auth.login(token);
-  };
+  const { currentCategory } = state;
 
-  //   const formChange_Handler = (event) => {
-  //     const { name, value } = event.target;
-  //     setFormState({
-  //       ...formState,
-  //       [name]: value,
-  //     });
-  //   };
+  const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
+
+  useEffect(() => {
+    if (data) {
+      dispatch({
+        type: UPDATE_PRODUCTS,
+        products: data.products,
+      });
+      data.products.forEach((product) => {
+        idbPromise("products", "put", product);
+      });
+    } else if (!loading) {
+      idbPromise("products", "get").then((products) => {
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: products,
+        });
+      });
+    }
+  }, [data, loading, dispatch]);
+
+  function filterProducts() {
+    if (!currentCategory) {
+      return state.products;
+    }
+
+    return state.products.filter(
+      (product) => product.category._id === currentCategory
+    );
+  }
 
   return (
     <div>
