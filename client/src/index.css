@@ -1,6 +1,7 @@
 :root {
   --button_color: rgb(17, 109, 74);
   --button_color_hover:  rgb(17, 109, 74, 0.5);
+  --button_color_hover_2:  rgba(5, 46, 30, 0.8);
 }
 
 * {
@@ -31,6 +32,17 @@ ul {
   align-items: center;
 }
 
+label {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input {
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 3px grey;
+}
+
 /* ------------------ STARTING CLASS BASED CSS STYLING ------------------ */
 
 .flex-row {
@@ -56,7 +68,7 @@ ul {
   background-color: var(--button_color);
   border-radius: 20px;
   border: 2px solid black;
-  box-shadow: 5px 5px 5px green;
+  box-shadow: 5px 5px 5px grey;
   width: 300px;
   height: 50px;
   align-items: center; /* vertical center w/ display: flex*/
@@ -72,8 +84,48 @@ ul {
   color: black;
 }
 
+.fakeButton_2 {
+  display: flex;
+  background-color: var(--button_color);
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px grey;
+  width: 300px;
+  height: 50px;
+  align-items: center; /* vertical center w/ display: flex*/
+  justify-content: center; /* horizontal center w/ display: flex*/
+}
+
+.fakeButton_2:hover {
+  background-color: var(--button_color_hover_2);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid white;
+  color: white;
+}
+
+.fakeButton_2 > a:hover {
+  color: white;
+  font-weight: bold;
+}
+
 .hover_1:hover {
   color: forestgreen;
   text-decoration: underline;
   font-weight: bolder;
+}
+
+.form_container {
+  background-color: rgba(12, 80, 54, 0.5);
+  justify-content: center;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 15px;
+  opacity: 10;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px grey;
+}
+
+/* Reset on the Bootstrap row -12 margin, left and right */
+.row {
+  margin: 0;
 }
