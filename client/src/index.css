@@ -137,6 +137,12 @@ input {
   box-shadow: 5px 5px 5px grey;
 }
 
+.form_title {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+
 /* Reset on the Bootstrap row -12 margin, left and right */
 .row {
   margin: 0;
