@@ -7,6 +7,7 @@ db.once("open", async () => {
   const categories = await Category.insertMany([
     { name: "vegetables" },
     { name: "fruits" },
+    { name: "herbs" },
   ]);
 
   console.log("categories seeded");
@@ -43,7 +44,7 @@ db.once("open", async () => {
     },
     {
       name: "basil",
-      category: categories[0]._id,
+      category: categories[2]._id,
       description: "Bundles of fresh organic basil leaves",
       image: "../../client/public/images/basil.png",
       price: 3.99,
@@ -147,7 +148,7 @@ db.once("open", async () => {
       image: "../../client/public/images/garlic.png",
       price: 3.99,
       quantity: 450,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "leek",
@@ -156,7 +157,7 @@ db.once("open", async () => {
       image: "../../client/public/images/leek.png",
       price: 4.99,
       quantity: 150,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "broccoli",
@@ -165,7 +166,7 @@ db.once("open", async () => {
       image: "../../client/public/images/broccoli.png",
       price: 4.99,
       quantity: 80,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "peas",
@@ -174,7 +175,7 @@ db.once("open", async () => {
       image: "../../client/public/images/peas.png",
       price: 1.99,
       quantity: 640,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "blueberries",
@@ -183,7 +184,7 @@ db.once("open", async () => {
       image: "../../client/public/images/blueberry.png",
       price: 5.99,
       quantity: 130,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "cherries",
@@ -192,7 +193,7 @@ db.once("open", async () => {
       image: "../../client/public/images/cherry.png",
       price: 3.99,
       quantity: 240,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "watermelon",
@@ -201,7 +202,7 @@ db.once("open", async () => {
       image: "../../client/public/images/watermelon.png",
       price: 6.99,
       quantity: 360,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "raspberries",
@@ -210,7 +211,7 @@ db.once("open", async () => {
       image: "../../client/public/images/raspberry.png",
       price: 8.99,
       quantity: 170,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "cucumber",
@@ -219,7 +220,7 @@ db.once("open", async () => {
       image: "../../client/public/images/cucumber.png",
       price: 4.99,
       quantity: 450,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "peppers",
@@ -228,7 +229,7 @@ db.once("open", async () => {
       image: "../../client/public/images/pepper.png",
       price: 4.99,
       quantity: 560,
-      user: User[0]._id
+      user: User[2]._id
     },
     {
       name: "grapes",
@@ -237,7 +238,7 @@ db.once("open", async () => {
       image: "../../client/public/images/grape.png",
       price: 5.99,
       quantity: 150,
-      user: User[0]._id
+      user: User[1]._id
     },
     {
       name: "eggplant",
@@ -246,7 +247,7 @@ db.once("open", async () => {
       image: "../../client/public/images/eggplant.png",
       price: 3.99,
       quantity: 30,
-      user: User[0]._id
+      user: User[1]._id
     },
     {
       name: "bananas",
@@ -255,7 +256,7 @@ db.once("open", async () => {
       image: "../../client/public/images/banana.png",
       price: 4.99,
       quantity: 300,
-      user: User[0]._id
+      user: User[1]._id
     },
     {
       name: "avacado",
@@ -264,7 +265,61 @@ db.once("open", async () => {
       image: "../../client/public/images/avacado.png",
       price: 6.99,
       quantity: 190,
+      user: User[1]._id
+    },
+    {
+      name: "asparagus",
+      category: categories[0]._id,
+      description: "fresh organic asparagus",
+      image: "../../client/public/images/asparagus.png",
+      price: 5.99,
+      quantity: 270,
       user: User[0]._id
+    },
+    {
+      name: "mint",
+      category: categories[2]._id,
+      description: "Bundles of fresh organic mint leaves",
+      image: "../../client/public/images/mint.png",
+      price: 4.99,
+      quantity: 140,
+      user: User[1]._id
+    },
+    {
+      name: "rosemary",
+      category: categories[2]._id,
+      description: "Bundles of fresh organic rosemary twigs",
+      image: "../../client/public/images/rosemary.png",
+      price: 5.99,
+      quantity: 450,
+      user: User[1]._id
+    },
+    {
+      name: "lavender",
+      category: categories[2]._id,
+      description: "Bundles of fresh organic lavender twigs",
+      image: "../../client/public/images/lavender.png",
+      price: 5.99,
+      quantity: 50,
+      user: User[1]._id
+    },
+    {
+      name: "thyme",
+      category: categories[2]._id,
+      description: "Bundles of fresh organic thyme",
+      image: "../../client/public/images/thyme.png",
+      price: 5.99,
+      quantity: 60,
+      user: User[1]._id
+    },
+    {
+      name: "bay leafs",
+      category: categories[2]._id,
+      description: "Bundles of fresh organic bay leaves",
+      image: "../../client/public/images/bayLeaf.png",
+      price: 3.99,
+      quantity: 50,
+      user: User[1]._id
     },
   ]);
 
@@ -291,6 +346,24 @@ db.once("open", async () => {
     gardenAddress: "Seattle1",
     email: "chris@test.com",
     password: "password",
+    orders: [
+      {
+        products: [products[0]._id, products[0]._id, products[1]._id],
+      },
+    ],
+  });
+
+  await User.create({
+    firstName: "Bob",
+    lastName: "Belcher",
+    gardenAddress: "Bellevue",
+    email: "bob@test.com",
+    password: "password",
+    orders: [
+      {
+        products: [products[0]._id, products[0]._id, products[1]._id],
+      },
+    ],
   });
 
   console.log("User seeded");
