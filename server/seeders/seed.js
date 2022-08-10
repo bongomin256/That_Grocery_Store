@@ -99,7 +99,7 @@ db.once("open", async () => {
       name: "pumpkin",
       category: categories[1]._id,
       description: "fresh organic Pumpkins",
-      image: "pumkin.jpg",
+      image: "pumpkin.jpg",
       price: 9.99,
       quantity: 1000,
       user: User[1]._id
@@ -120,6 +120,69 @@ db.once("open", async () => {
       image: "tomato.jpg",
       price: 2.99,
       quantity: 600,
+      user: User[0]._id
+    },
+    {
+      name: "lettuce",
+      category: categories[0]._id,
+      description: "fresh organic Green leaf lettuce",
+      image: "lettuce.jpg",
+      price: 2.99,
+      quantity: 40,
+      user: User[0]._id
+    },
+    {
+      name: "radish",
+      category: categories[0]._id,
+      description: "fresh organic Radishes",
+      image: "radish.jpg",
+      price: 4.99,
+      quantity: 200,
+      user: User[0]._id
+    },
+    {
+      name: "beet",
+      category: categories[0]._id,
+      description: "fresh organic red beets",
+      image: "beet.jpg",
+      price: 1.99,
+      quantity: 240,
+      user: User[0]._id
+    },
+    {
+      name: "garlic",
+      category: categories[0]._id,
+      description: "fresh organic Garlic Cloves",
+      image: "garlic.jpg",
+      price: 3.99,
+      quantity: 450,
+      user: User[0]._id
+    },
+    {
+      name: "leek",
+      category: categories[0]._id,
+      description: "fresh organic water leeks",
+      image: "leek.jpg",
+      price: 4.99,
+      quantity: 150,
+      user: User[0]._id
+    },
+    {
+      name: "broccoli",
+      category: categories[0]._id,
+      description: "fresh organic Head of broccoli",
+      image: "broccoli.jpg",
+      price: 4.99,
+      quantity: 80,
+      user: User[0]._id
+    },
+    {
+      name: "peas",
+      category: categories[0]._id,
+      description: "fresh organic Snap Peas",
+      image: "peas.jpg",
+      price: 1.99,
+      quantity: 640,
       user: User[0]._id
     },
   ]);
