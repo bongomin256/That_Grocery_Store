@@ -17,7 +17,7 @@ db.once("open", async () => {
     {
       name: "carrot",
       description: "fresh organic multi colored carrots",
-      image: "carrot.jpg",
+      image: "../../client/public/carrot.png",
       category: categories[0]._id,
       price: 2.99,
       quantity: 500,
@@ -26,7 +26,7 @@ db.once("open", async () => {
     {
       name: "onion",
       description: "Fresh Organic Red Onion",
-      image: "redOnion.jpg",
+      image: "../../client/public/redOnion.png",
       category: categories[0]._id,
       price: 1.99,
       quantity: 500,
@@ -36,7 +36,7 @@ db.once("open", async () => {
       name: "cabbage",
       category: categories[0]._id,
       description: "fresh organic head of cabbage",
-      image: "cabbage.jpg",
+      image: "../../client/public/cabbage.png",
       price: 7.99,
       quantity: 20,
       user: User[1]._id
@@ -45,7 +45,7 @@ db.once("open", async () => {
       name: "basil",
       category: categories[0]._id,
       description: "Bundles of fresh organic basil leaves",
-      image: "basil.jpg",
+      image: "../../client/public/basil.png",
       price: 3.99,
       quantity: 50,
       user: User[1]._id
@@ -54,7 +54,7 @@ db.once("open", async () => {
       name: "celery",
       category: categories[0]._id,
       description: "bundles of fresh organic Celery",
-      image: "celery.jpg",
+      image: "../../client/public/celery.png",
       price: 14.99,
       quantity: 100,
       user: User[0]._id
@@ -63,7 +63,7 @@ db.once("open", async () => {
       name: "apple",
       category: categories[1]._id,
       description: "Fresh Organic Honeycrisp Apples",
-      image: "apple.jpg",
+      image: "../../client/public/apple.png",
       price: 2.99,
       quantity: 30,
       user: User[0]._id
@@ -72,7 +72,7 @@ db.once("open", async () => {
       name: "strawberries",
       category: categories[1]._id,
       description: "fresh organic box of strawberries",
-      image: "strawberries.jpg",
+      image: "../../client/public/strawberry.png",
       price: 2.99,
       quantity: 30,
       user: User[0]._id
@@ -81,7 +81,7 @@ db.once("open", async () => {
       name: "corn",
       category: categories[0]._id,
       description: "fresh organic ears of golden corn",
-      image: "corn.jpg",
+      image: "../../client/public/corn.png",
       price: 1.99,
       quantity: 300,
       user: User[1]._id
@@ -90,7 +90,7 @@ db.once("open", async () => {
       name: "oranges",
       category: categories[1]._id,
       description: "fresh organic Navel oranges",
-      image: "orange.jpg",
+      image: "../../client/public/orange.png",
       price: 1.99,
       quantity: 1000,
       user: User[1]._id
@@ -99,7 +99,7 @@ db.once("open", async () => {
       name: "potato",
       category: categories[0]._id,
       description: "fresh organic russet potato",
-      image: "potato.jpg",
+      image: "../../client/public/potato.png",
       price: 1.99,
       quantity: 100,
       user: User[0]._id
@@ -108,7 +108,7 @@ db.once("open", async () => {
       name: "tomato",
       category: categories[1]._id,
       description: "Fresh organic Heirloom tomato",
-      image: "tomato.jpg",
+      image: "../../client/public/tomato.png",
       price: 2.99,
       quantity: 600,
       user: User[0]._id
@@ -117,7 +117,7 @@ db.once("open", async () => {
       name: "lettuce",
       category: categories[0]._id,
       description: "fresh organic Green leaf lettuce",
-      image: "lettuce.jpg",
+      image: "../../client/public/lettuce.png",
       price: 2.99,
       quantity: 40,
       user: User[0]._id
@@ -126,7 +126,7 @@ db.once("open", async () => {
       name: "radish",
       category: categories[0]._id,
       description: "fresh organic Radishes",
-      image: "radish.jpg",
+      image: "../../client/public/radish.png",
       price: 4.99,
       quantity: 200,
       user: User[0]._id
@@ -135,7 +135,7 @@ db.once("open", async () => {
       name: "beet",
       category: categories[0]._id,
       description: "fresh organic red beets",
-      image: "beet.jpg",
+      image: "../../client/public/beet.png",
       price: 1.99,
       quantity: 240,
       user: User[0]._id
@@ -144,7 +144,7 @@ db.once("open", async () => {
       name: "garlic",
       category: categories[0]._id,
       description: "fresh organic Garlic Cloves",
-      image: "garlic.jpg",
+      image: "../../client/public/garlic.png",
       price: 3.99,
       quantity: 450,
       user: User[0]._id
@@ -153,7 +153,7 @@ db.once("open", async () => {
       name: "leek",
       category: categories[0]._id,
       description: "fresh organic water leeks",
-      image: "leek.jpg",
+      image: "../../client/public/leek.png",
       price: 4.99,
       quantity: 150,
       user: User[0]._id
@@ -162,7 +162,7 @@ db.once("open", async () => {
       name: "broccoli",
       category: categories[0]._id,
       description: "fresh organic Head of broccoli",
-      image: "broccoli.jpg",
+      image: "../../client/public/broccoli.png",
       price: 4.99,
       quantity: 80,
       user: User[0]._id
@@ -171,7 +171,7 @@ db.once("open", async () => {
       name: "peas",
       category: categories[0]._id,
       description: "fresh organic Snap Peas",
-      image: "peas.jpg",
+      image: "../../client/public/peas.png",
       price: 1.99,
       quantity: 640,
       user: User[0]._id
@@ -180,7 +180,7 @@ db.once("open", async () => {
       name: "blueberries",
       category: categories[1]._id,
       description: "Fresh Organic Blueberries",
-      image: "blueberries.jpg",
+      image: "../../client/public/blueberry.png",
       price: 5.99,
       quantity: 130,
       user: User[0]._id
@@ -189,7 +189,7 @@ db.once("open", async () => {
       name: "cherries",
       category: categories[1]._id,
       description: "Fresh Organic cherries",
-      image: "cherries.jpg",
+      image: "../../client/public/cherry.png",
       price: 3.99,
       quantity: 240,
       user: User[0]._id
@@ -198,7 +198,7 @@ db.once("open", async () => {
       name: "watermelon",
       category: categories[1]._id,
       description: "Fresh Organic Watermelon",
-      image: "watermelon.jpg",
+      image: "../../client/public/watermelon.png",
       price: 6.99,
       quantity: 360,
       user: User[0]._id
@@ -207,7 +207,7 @@ db.once("open", async () => {
       name: "raspberries",
       category: categories[1]._id,
       description: "Fresh Organic Raspberries",
-      image: "raspberry.jpg",
+      image: "../../client/public/raspberry.png",
       price: 8.99,
       quantity: 170,
       user: User[0]._id
@@ -216,7 +216,7 @@ db.once("open", async () => {
       name: "cucumber",
       category: categories[1]._id,
       description: "Fresh Organic cucumber",
-      image: "cucumber.jpg",
+      image: "../../client/public/cucumber.png",
       price: 4.99,
       quantity: 450,
       user: User[0]._id
@@ -225,7 +225,7 @@ db.once("open", async () => {
       name: "peppers",
       category: categories[1]._id,
       description: "Fresh Organic Red Peppers",
-      image: "pepper.jpg",
+      image: "../../client/public/pepper.png",
       price: 4.99,
       quantity: 560,
       user: User[0]._id
@@ -234,7 +234,7 @@ db.once("open", async () => {
       name: "grapes",
       category: categories[1]._id,
       description: "Fresh Organic Concord Grapes",
-      image: "grapes.jpg",
+      image: "../../client/public/grape.png",
       price: 5.99,
       quantity: 150,
       user: User[0]._id
@@ -243,7 +243,7 @@ db.once("open", async () => {
       name: "eggplant",
       category: categories[1]._id,
       description: "Fresh Organic eggplant",
-      image: "eggplant.jpg",
+      image: "../../client/public/eggplant.png",
       price: 3.99,
       quantity: 30,
       user: User[0]._id
@@ -252,7 +252,7 @@ db.once("open", async () => {
       name: "bananas",
       category: categories[1]._id,
       description: "Fresh Organic Ripe bananas",
-      image: "banana.jpg",
+      image: "../../client/public/banana.png",
       price: 4.99,
       quantity: 300,
       user: User[0]._id
@@ -261,7 +261,7 @@ db.once("open", async () => {
       name: "avacado",
       category: categories[1]._id,
       description: "Fresh Organic Avacados",
-      image: "avacado.jpg",
+      image: "../../client/public/avacado.png",
       price: 6.99,
       quantity: 190,
       user: User[0]._id
