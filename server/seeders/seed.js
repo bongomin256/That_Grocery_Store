@@ -96,15 +96,6 @@ db.once("open", async () => {
       user: User[1]._id
     },
     {
-      name: "pumpkin",
-      category: categories[1]._id,
-      description: "fresh organic Pumpkins",
-      image: "pumpkin.jpg",
-      price: 9.99,
-      quantity: 1000,
-      user: User[1]._id
-    },
-    {
       name: "potato",
       category: categories[0]._id,
       description: "fresh organic russet potato",
@@ -183,6 +174,96 @@ db.once("open", async () => {
       image: "peas.jpg",
       price: 1.99,
       quantity: 640,
+      user: User[0]._id
+    },
+    {
+      name: "blueberries",
+      category: categories[1]._id,
+      description: "Fresh Organic Blueberries",
+      image: "blueberries.jpg",
+      price: 5.99,
+      quantity: 130,
+      user: User[0]._id
+    },
+    {
+      name: "cherries",
+      category: categories[1]._id,
+      description: "Fresh Organic cherries",
+      image: "cherries.jpg",
+      price: 3.99,
+      quantity: 240,
+      user: User[0]._id
+    },
+    {
+      name: "watermelon",
+      category: categories[1]._id,
+      description: "Fresh Organic Watermelon",
+      image: "watermelon.jpg",
+      price: 6.99,
+      quantity: 360,
+      user: User[0]._id
+    },
+    {
+      name: "raspberries",
+      category: categories[1]._id,
+      description: "Fresh Organic Raspberries",
+      image: "raspberry.jpg",
+      price: 8.99,
+      quantity: 170,
+      user: User[0]._id
+    },
+    {
+      name: "cucumber",
+      category: categories[1]._id,
+      description: "Fresh Organic cucumber",
+      image: "cucumber.jpg",
+      price: 4.99,
+      quantity: 450,
+      user: User[0]._id
+    },
+    {
+      name: "peppers",
+      category: categories[1]._id,
+      description: "Fresh Organic Red Peppers",
+      image: "pepper.jpg",
+      price: 4.99,
+      quantity: 560,
+      user: User[0]._id
+    },
+    {
+      name: "grapes",
+      category: categories[1]._id,
+      description: "Fresh Organic Concord Grapes",
+      image: "grapes.jpg",
+      price: 5.99,
+      quantity: 150,
+      user: User[0]._id
+    },
+    {
+      name: "eggplant",
+      category: categories[1]._id,
+      description: "Fresh Organic eggplant",
+      image: "eggplant.jpg",
+      price: 3.99,
+      quantity: 30,
+      user: User[0]._id
+    },
+    {
+      name: "bananas",
+      category: categories[1]._id,
+      description: "Fresh Organic Ripe bananas",
+      image: "banana.jpg",
+      price: 4.99,
+      quantity: 300,
+      user: User[0]._id
+    },
+    {
+      name: "avacado",
+      category: categories[1]._id,
+      description: "Fresh Organic Avacados",
+      image: "avacado.jpg",
+      price: 6.99,
+      quantity: 190,
       user: User[0]._id
     },
   ]);
