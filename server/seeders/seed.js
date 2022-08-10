@@ -22,7 +22,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       price: 2.99,
       quantity: 500,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "onion",
@@ -31,7 +31,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       price: 1.99,
       quantity: 500,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "cabbage",
@@ -40,7 +40,7 @@ db.once("open", async () => {
       image: "../../client/public/images/cabbage.png",
       price: 7.99,
       quantity: 20,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "basil",
@@ -49,7 +49,7 @@ db.once("open", async () => {
       image: "../../client/public/images/basil.png",
       price: 3.99,
       quantity: 50,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "celery",
@@ -58,7 +58,7 @@ db.once("open", async () => {
       image: "../../client/public/images/celery.png",
       price: 14.99,
       quantity: 100,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "apple",
@@ -67,7 +67,7 @@ db.once("open", async () => {
       image: "../../client/public/images/apple.png",
       price: 2.99,
       quantity: 30,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "strawberries",
@@ -76,7 +76,7 @@ db.once("open", async () => {
       image: "../../client/public/images/strawberry.png",
       price: 2.99,
       quantity: 30,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "corn",
@@ -85,7 +85,7 @@ db.once("open", async () => {
       image: "../../client/public/images/corn.png",
       price: 1.99,
       quantity: 300,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "oranges",
@@ -94,7 +94,7 @@ db.once("open", async () => {
       image: "../../client/public/images/orange.png",
       price: 1.99,
       quantity: 1000,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "potato",
@@ -103,7 +103,7 @@ db.once("open", async () => {
       image: "../../client/public/images/potato.png",
       price: 1.99,
       quantity: 100,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "tomato",
@@ -112,7 +112,7 @@ db.once("open", async () => {
       image: "../../client/public/images/tomato.png",
       price: 2.99,
       quantity: 600,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "lettuce",
@@ -121,7 +121,7 @@ db.once("open", async () => {
       image: "../../client/public/images/lettuce.png",
       price: 2.99,
       quantity: 40,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "radish",
@@ -130,7 +130,7 @@ db.once("open", async () => {
       image: "../../client/public/images/radish.png",
       price: 4.99,
       quantity: 200,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "beet",
@@ -139,7 +139,7 @@ db.once("open", async () => {
       image: "../../client/public/images/beet.png",
       price: 1.99,
       quantity: 240,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "garlic",
@@ -148,7 +148,7 @@ db.once("open", async () => {
       image: "../../client/public/images/garlic.png",
       price: 3.99,
       quantity: 450,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "leek",
@@ -157,7 +157,7 @@ db.once("open", async () => {
       image: "../../client/public/images/leek.png",
       price: 4.99,
       quantity: 150,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "broccoli",
@@ -166,7 +166,7 @@ db.once("open", async () => {
       image: "../../client/public/images/broccoli.png",
       price: 4.99,
       quantity: 80,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "peas",
@@ -175,7 +175,7 @@ db.once("open", async () => {
       image: "../../client/public/images/peas.png",
       price: 1.99,
       quantity: 640,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "blueberries",
@@ -184,7 +184,7 @@ db.once("open", async () => {
       image: "../../client/public/images/blueberry.png",
       price: 5.99,
       quantity: 130,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "cherries",
@@ -193,7 +193,7 @@ db.once("open", async () => {
       image: "../../client/public/images/cherry.png",
       price: 3.99,
       quantity: 240,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "watermelon",
@@ -202,7 +202,7 @@ db.once("open", async () => {
       image: "../../client/public/images/watermelon.png",
       price: 6.99,
       quantity: 360,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "raspberries",
@@ -211,7 +211,7 @@ db.once("open", async () => {
       image: "../../client/public/images/raspberry.png",
       price: 8.99,
       quantity: 170,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "cucumber",
@@ -220,7 +220,7 @@ db.once("open", async () => {
       image: "../../client/public/images/cucumber.png",
       price: 4.99,
       quantity: 450,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "peppers",
@@ -229,7 +229,7 @@ db.once("open", async () => {
       image: "../../client/public/images/pepper.png",
       price: 4.99,
       quantity: 560,
-      user: User[2]._id
+      user: User[2]._id,
     },
     {
       name: "grapes",
@@ -238,7 +238,7 @@ db.once("open", async () => {
       image: "../../client/public/images/grape.png",
       price: 5.99,
       quantity: 150,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "eggplant",
@@ -247,7 +247,7 @@ db.once("open", async () => {
       image: "../../client/public/images/eggplant.png",
       price: 3.99,
       quantity: 30,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "bananas",
@@ -256,7 +256,7 @@ db.once("open", async () => {
       image: "../../client/public/images/banana.png",
       price: 4.99,
       quantity: 300,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "avacado",
@@ -265,7 +265,7 @@ db.once("open", async () => {
       image: "../../client/public/images/avacado.png",
       price: 6.99,
       quantity: 190,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "asparagus",
@@ -274,7 +274,7 @@ db.once("open", async () => {
       image: "../../client/public/images/asparagus.png",
       price: 5.99,
       quantity: 270,
-      user: User[0]._id
+      user: User[0]._id,
     },
     {
       name: "mint",
@@ -283,7 +283,7 @@ db.once("open", async () => {
       image: "../../client/public/images/mint.png",
       price: 4.99,
       quantity: 140,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "rosemary",
@@ -292,7 +292,7 @@ db.once("open", async () => {
       image: "../../client/public/images/rosemary.png",
       price: 5.99,
       quantity: 450,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "lavender",
@@ -301,7 +301,7 @@ db.once("open", async () => {
       image: "../../client/public/images/lavender.png",
       price: 5.99,
       quantity: 50,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "thyme",
@@ -310,7 +310,7 @@ db.once("open", async () => {
       image: "../../client/public/images/thyme.png",
       price: 5.99,
       quantity: 60,
-      user: User[1]._id
+      user: User[1]._id,
     },
     {
       name: "bay leafs",
@@ -319,7 +319,7 @@ db.once("open", async () => {
       image: "../../client/public/images/bayLeaf.png",
       price: 3.99,
       quantity: 50,
-      user: User[1]._id
+      user: User[1]._id,
     },
   ]);
 
