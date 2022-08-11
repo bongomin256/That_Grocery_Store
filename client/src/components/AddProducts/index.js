@@ -17,8 +17,8 @@ function AddProducts() {
         quantity: formState.quantity,
       },
     });
-    // const token = mutationResponse.data.addUser.token;
-    // auth.login(token);
+    const token = mutationResponse.data.addUser.token;
+    auth.login(token);
   };
 
   const formChange_Handler = (event) => {
@@ -30,48 +30,74 @@ function AddProducts() {
   };
 
   return (
-    <div className="col-md-6 form_container container">
-      <h2 className="d-flex row justify-content-center align-items-center">
-        SELLING GREENS:
-      </h2>
-      <form onSubmit={form_Handler}>
-        <div className="form-row">
-          <div className="form-group">
-            <label htmlFor="product">PRODUCT NAME: </label>
-            <input
-              placeholder="Product Name"
-              name="product"
-              type="product"
-              id="product"
-              onChange={formChange_Handler}
-            />
+    <div className="d-flex row justify-content-center align-items-center">
+      <div className="col-md-4 form_container container">
+        <div className="form_title">SELLING GREENS</div>
+        <hr></hr>
+        <form
+          onSubmit={form_Handler}
+          className="container row align-items-center"
+        >
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="product">PRODUCT NAME:</label>
+              <input
+                placeholder="Product Name"
+                name="product"
+                type="product"
+                id="product"
+                className="form-control"
+                onChange={formChange_Handler}
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="expirationDate">EXPIRATION DATE: </label>
-            <input
-              placeholder="Expiration Date"
-              name="expirationDate"
-              type="expirationDate"
-              id="expirationDate"
-              onChange={formChange_Handler}
-            />
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="expirationDate">EXPIRATION DATE:</label>
+              <input
+                placeholder="Expiration Date"
+                name="expirationDate"
+                type="expirationDate"
+                id="expirationDate"
+                className="form-control"
+                onChange={formChange_Handler}
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="quantity">QUANTITY: </label>
-            <input
-              placeholder="quantity"
-              name="quantity"
-              type="quantity"
-              id="quantity"
-              onChange={formChange_Handler}
-            />
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="quantity">QUANTITY:</label>
+              <input
+                placeholder="quantity"
+                name="quantity"
+                type="quantity"
+                id="quantity"
+                className="form-control"
+                onChange={formChange_Handler}
+              />
+            </div>
+          </div>
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="price">PRICE:</label>
+              <input
+                placeholder="price"
+                name="price"
+                type="price"
+                id="price"
+                className="form-control"
+                onChange={formChange_Handler}
+              />
+            </div>
           </div>
 
-          <div className="row justify-content-center m-2">
-            <button type="submit">POST GREEN</button>
+          <div className="row justify-content-center">
+            <button type="submit" className="fakeButton_2">
+              POST GREEN
+            </button>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }
