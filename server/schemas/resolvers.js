@@ -117,6 +117,20 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+    addProduct: async (parent, { products }, context) => {
+      console.log(context);
+      if (context.user) {
+        const products = new Product({ products });
+
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { products: products },
+        });
+
+        return products;
+      }
+
+      throw new AuthenticationError("Not logged in");
+    },
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, {

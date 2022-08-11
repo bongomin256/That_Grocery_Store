@@ -1,15 +1,17 @@
 import { useMutation } from "@apollo/client";
 import React, { useState } from "react";
 import auth from "../../utils/auth";
-import { ADD_ORDER } from "../../utils/mutations";
+// import { ADD_ORDER } from "../../utils/mutations";
+import { ADD_PRODUCT } from "../../utils/mutations";
 
 function AddProducts() {
-  const [formState, setFormState] = useState({ email: "", password: "" });
-  const [addOrder] = useMutation(ADD_ORDER);
+  const [formState, setFormState] = useState({});
+  const [addProduct] = useMutation(ADD_PRODUCT);
 
   const form_Handler = async (event) => {
     event.preventDefault();
-    const mutationResponse = await addOrder({
+    console.log(formState);
+    const mutationResponse = await addProduct({
       variables: {
         name: formState.name,
         expirationDate: formState.expirationDate,
@@ -43,7 +45,7 @@ function AddProducts() {
               <label htmlFor="product">PRODUCT NAME:</label>
               <input
                 placeholder="Product Name"
-                name="product"
+                name="name"
                 type="product"
                 id="product"
                 className="form-control"
