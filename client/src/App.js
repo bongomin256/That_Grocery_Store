@@ -17,7 +17,6 @@ import AddProducts from "./pages/AddProducts";
 import ProductDetails from "./pages/ProductDetails";
 import Profile from "./pages/Profile";
 
-
 import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 
@@ -52,7 +51,7 @@ function App() {
         <Router>
           <div className="d-flex row no_padding justify-content-center align-items-center">
             <Nav />
-            <div className="d-flex row justify-content-center">
+            <div>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
@@ -62,7 +61,6 @@ function App() {
                 <Route path="/addproducts" element={<AddProducts />} />
                 <Route path="/productdetails" element={<ProductDetails />} />
                 <Route path="/profile" element={<Profile />} />
-
               </Routes>
             </div>
           </div>

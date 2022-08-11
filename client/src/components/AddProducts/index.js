@@ -1,17 +1,19 @@
 import { useMutation } from "@apollo/client";
 import React, { useState } from "react";
 import auth from "../../utils/auth";
-import { ADD_ORDER } from "../../utils/mutations";
+// import { ADD_ORDER } from "../../utils/mutations";
+import { ADD_PRODUCT } from "../../utils/mutations";
 
 import background_JPG from "../../images/ADD_PRODUCTS.jpg";
 
 function AddProducts() {
-  const [formState, setFormState] = useState({ email: "", password: "" });
-  const [addOrder] = useMutation(ADD_ORDER);
+  const [formState, setFormState] = useState({});
+  const [addProduct] = useMutation(ADD_PRODUCT);
 
   const form_Handler = async (event) => {
     event.preventDefault();
-    const mutationResponse = await addOrder({
+    console.log(formState);
+    const mutationResponse = await addProduct({
       variables: {
         name: formState.name,
         expirationDate: formState.expirationDate,
@@ -19,8 +21,8 @@ function AddProducts() {
         quantity: formState.quantity,
       },
     });
-    // const token = mutationResponse.data.addUser.token;
-    // auth.login(token);
+    const token = mutationResponse.data.addUser.token;
+    auth.login(token);
   };
 
   const formChange_Handler = (event) => {
@@ -32,6 +34,7 @@ function AddProducts() {
   };
 
   return (
+
     <div className='d-flex row justify-content-center align-items-center div_img' style={{
       backgroundImage: `url(${background_JPG})`,
       backgroundRepeat: 'no-repeat',
@@ -57,22 +60,26 @@ function AddProducts() {
             </div>
             <div className="form-group">
               <label htmlFor="expirationDate" className="form_label">Produce Expiration Date: </label>
+
               <input
                 placeholder="Expiration Date"
                 name="expirationDate"
                 type="expirationDate"
                 id="expirationDate"
+
                 className='form-control'
                 onChange={formChange_Handler}
               />
             </div>
             <div className="form-group">
               <label htmlFor="quantity" className="form_label">Quantity to Sell: </label>
+
               <input
                 placeholder="quantity"
                 name="quantity"
                 type="quantity"
                 id="quantity"
+
                 className='form-control'
                 onChange={formChange_Handler}
               />
@@ -81,6 +88,7 @@ function AddProducts() {
             <div className="row justify-content-center m-2">
               <button type="submit" className='fakeButton_2'>SELL MY GREEN!</button>
             </div>
+
           </div>
         </form>
       </div>
