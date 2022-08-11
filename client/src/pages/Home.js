@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="row">
-      <div className="flex-row banner_1 align-self-center no_padding">
+      <div className="flex-row banner_1 align-self-center banner_padding">
         <Link to="/addproducts">
           <h3 className="fakeButton">SELL YOUR GREENS</h3>
         </Link>
@@ -17,11 +17,13 @@ const Home = () => {
           <h3 className="fakeButton">VIEW ALL GREENS</h3>
         </Link>
       </div>
-      <h3>WHO WE ARE:</h3>
-      <p>
+      <div className="row justify-content-center">
+        <h3 className= 'col-3'>WHO WE ARE:</h3>
+        <p className="col-5">
         HELLO! We are 'That Grocery Store', a local Co-op that lets growers
         (like you) buy and sell local produce!
       </p>
+      </div>
     </div>
   );
 };
