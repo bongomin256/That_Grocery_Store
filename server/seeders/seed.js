@@ -17,6 +17,7 @@ db.once("open", async () => {
   const products = await Product.insertMany([
     {
       name: "carrot",
+      expirationDate: "12 days",
       description: "fresh organic multi colored carrots",
       image: "../../client/public/images/carrot.png",
       category: categories[0]._id,
@@ -26,6 +27,7 @@ db.once("open", async () => {
     },
     {
       name: "onion",
+      expirationDate: "10 days",
       description: "Fresh Organic Red Onion",
       image: "../../client/public/images/redOnion.png",
       category: categories[0]._id,
@@ -35,6 +37,7 @@ db.once("open", async () => {
     },
     {
       name: "cabbage",
+      expirationDate: "16 days",
       category: categories[0]._id,
       description: "fresh organic head of cabbage",
       image: "../../client/public/images/cabbage.png",
@@ -44,6 +47,7 @@ db.once("open", async () => {
     },
     {
       name: "basil",
+      expirationDate: "20 days",
       category: categories[2]._id,
       description: "Bundles of fresh organic basil leaves",
       image: "../../client/public/images/basil.png",
@@ -53,6 +57,7 @@ db.once("open", async () => {
     },
     {
       name: "celery",
+      expirationDate: "12 days",
       category: categories[0]._id,
       description: "bundles of fresh organic Celery",
       image: "../../client/public/images/celery.png",
@@ -62,6 +67,7 @@ db.once("open", async () => {
     },
     {
       name: "apple",
+      expirationDate: "14 days",
       category: categories[1]._id,
       description: "Fresh Organic Honeycrisp Apples",
       image: "../../client/public/images/apple.png",
@@ -71,6 +77,7 @@ db.once("open", async () => {
     },
     {
       name: "strawberries",
+      expirationDate: "20 days",
       category: categories[1]._id,
       description: "fresh organic box of strawberries",
       image: "../../client/public/images/strawberry.png",
@@ -80,6 +87,7 @@ db.once("open", async () => {
     },
     {
       name: "corn",
+      expirationDate: "18 days",
       category: categories[0]._id,
       description: "fresh organic ears of golden corn",
       image: "../../client/public/images/corn.png",
@@ -89,6 +97,7 @@ db.once("open", async () => {
     },
     {
       name: "oranges",
+      expirationDate: "10 days",
       category: categories[1]._id,
       description: "fresh organic Navel oranges",
       image: "../../client/public/images/orange.png",
@@ -98,6 +107,7 @@ db.once("open", async () => {
     },
     {
       name: "potato",
+      expirationDate: "14 days",
       category: categories[0]._id,
       description: "fresh organic russet potato",
       image: "../../client/public/images/potato.png",
@@ -107,6 +117,7 @@ db.once("open", async () => {
     },
     {
       name: "tomato",
+      expirationDate: "4 days",
       category: categories[1]._id,
       description: "Fresh organic Heirloom tomato",
       image: "../../client/public/images/tomato.png",
@@ -116,6 +127,7 @@ db.once("open", async () => {
     },
     {
       name: "lettuce",
+      expirationDate: "8 days",
       category: categories[0]._id,
       description: "fresh organic Green leaf lettuce",
       image: "../../client/public/images/lettuce.png",
@@ -125,6 +137,7 @@ db.once("open", async () => {
     },
     {
       name: "radish",
+      expirationDate: "14 days",
       category: categories[0]._id,
       description: "fresh organic Radishes",
       image: "../../client/public/images/radish.png",
@@ -134,6 +147,7 @@ db.once("open", async () => {
     },
     {
       name: "beet",
+      expirationDate: "20 days",
       category: categories[0]._id,
       description: "fresh organic red beets",
       image: "../../client/public/images/beet.png",
@@ -143,6 +157,7 @@ db.once("open", async () => {
     },
     {
       name: "garlic",
+      expirationDate: "50 days",
       category: categories[0]._id,
       description: "fresh organic Garlic Cloves",
       image: "../../client/public/images/garlic.png",
@@ -152,6 +167,7 @@ db.once("open", async () => {
     },
     {
       name: "leek",
+      expirationDate: "12 days",
       category: categories[0]._id,
       description: "fresh organic water leeks",
       image: "../../client/public/images/leek.png",
@@ -161,6 +177,7 @@ db.once("open", async () => {
     },
     {
       name: "broccoli",
+      expirationDate: "13 days",
       category: categories[0]._id,
       description: "fresh organic Head of broccoli",
       image: "../../client/public/images/broccoli.png",
@@ -170,6 +187,7 @@ db.once("open", async () => {
     },
     {
       name: "peas",
+      expirationDate: "15 days",
       category: categories[0]._id,
       description: "fresh organic Snap Peas",
       image: "../../client/public/images/peas.png",
@@ -179,6 +197,7 @@ db.once("open", async () => {
     },
     {
       name: "blueberries",
+      expirationDate: "6 days",
       category: categories[1]._id,
       description: "Fresh Organic Blueberries",
       image: "../../client/public/images/blueberry.png",
@@ -188,6 +207,7 @@ db.once("open", async () => {
     },
     {
       name: "cherries",
+      expirationDate: "13 days",
       category: categories[1]._id,
       description: "Fresh Organic cherries",
       image: "../../client/public/images/cherry.png",
@@ -197,6 +217,7 @@ db.once("open", async () => {
     },
     {
       name: "watermelon",
+      expirationDate: "20 days",
       category: categories[1]._id,
       description: "Fresh Organic Watermelon",
       image: "../../client/public/images/watermelon.png",
@@ -206,6 +227,7 @@ db.once("open", async () => {
     },
     {
       name: "raspberries",
+      expirationDate: "9 days",
       category: categories[1]._id,
       description: "Fresh Organic Raspberries",
       image: "../../client/public/images/raspberry.png",
@@ -215,6 +237,7 @@ db.once("open", async () => {
     },
     {
       name: "cucumber",
+      expirationDate: "14 days",
       category: categories[1]._id,
       description: "Fresh Organic cucumber",
       image: "../../client/public/images/cucumber.png",
@@ -224,6 +247,7 @@ db.once("open", async () => {
     },
     {
       name: "peppers",
+      expirationDate: "11 days",
       category: categories[1]._id,
       description: "Fresh Organic Red Peppers",
       image: "../../client/public/images/pepper.png",
@@ -233,6 +257,7 @@ db.once("open", async () => {
     },
     {
       name: "grapes",
+      expirationDate: "17 days",
       category: categories[1]._id,
       description: "Fresh Organic Concord Grapes",
       image: "../../client/public/images/grape.png",
@@ -242,6 +267,7 @@ db.once("open", async () => {
     },
     {
       name: "eggplant",
+      expirationDate: "20 days",
       category: categories[1]._id,
       description: "Fresh Organic eggplant",
       image: "../../client/public/images/eggplant.png",
@@ -251,6 +277,7 @@ db.once("open", async () => {
     },
     {
       name: "bananas",
+      expirationDate: "7 days",
       category: categories[1]._id,
       description: "Fresh Organic Ripe bananas",
       image: "../../client/public/images/banana.png",
@@ -260,6 +287,7 @@ db.once("open", async () => {
     },
     {
       name: "avacado",
+      expirationDate: "9 days",
       category: categories[1]._id,
       description: "Fresh Organic Avacados",
       image: "../../client/public/images/avacado.png",
@@ -269,6 +297,7 @@ db.once("open", async () => {
     },
     {
       name: "asparagus",
+      expirationDate: "13 days",
       category: categories[0]._id,
       description: "fresh organic asparagus",
       image: "../../client/public/images/asparagus.png",
@@ -278,6 +307,7 @@ db.once("open", async () => {
     },
     {
       name: "mint",
+      expirationDate: "6 days",
       category: categories[2]._id,
       description: "Bundles of fresh organic mint leaves",
       image: "../../client/public/images/mint.png",
@@ -287,6 +317,7 @@ db.once("open", async () => {
     },
     {
       name: "rosemary",
+      expirationDate: "7 days",
       category: categories[2]._id,
       description: "Bundles of fresh organic rosemary twigs",
       image: "../../client/public/images/rosemary.png",
@@ -296,6 +327,7 @@ db.once("open", async () => {
     },
     {
       name: "lavender",
+      expirationDate: "9 days",
       category: categories[2]._id,
       description: "Bundles of fresh organic lavender twigs",
       image: "../../client/public/images/lavender.png",
@@ -305,6 +337,7 @@ db.once("open", async () => {
     },
     {
       name: "thyme",
+      expirationDate: "13 days",
       category: categories[2]._id,
       description: "Bundles of fresh organic thyme",
       image: "../../client/public/images/thyme.png",
@@ -314,6 +347,7 @@ db.once("open", async () => {
     },
     {
       name: "bay leafs",
+      expirationDate: "7 days",
       category: categories[2]._id,
       description: "Bundles of fresh organic bay leaves",
       image: "../../client/public/images/bayLeaf.png",
