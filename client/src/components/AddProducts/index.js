@@ -4,6 +4,8 @@ import auth from "../../utils/auth";
 // import { ADD_ORDER } from "../../utils/mutations";
 import { ADD_PRODUCT } from "../../utils/mutations";
 
+import background_JPG from "../../images/ADD_PRODUCTS.jpg";
+
 function AddProducts() {
   const [formState, setFormState] = useState({});
   const [addProduct] = useMutation(ADD_PRODUCT);
@@ -32,71 +34,61 @@ function AddProducts() {
   };
 
   return (
-    <div className="d-flex row justify-content-center align-items-center">
-      <div className="col-md-4 form_container container">
-        <div className="form_title">SELLING GREENS</div>
-        <hr></hr>
-        <form
-          onSubmit={form_Handler}
-          className="container row align-items-center"
-        >
+
+    <div className='d-flex row justify-content-center align-items-center div_img' style={{
+      backgroundImage: `url(${background_JPG})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }}>
+
+    <div className='col-md-4 form_container container no_padding'>
+      <div className='form_title'>SELLING GREENS! (Produce)</div>
+      <hr></hr>
+        <form onSubmit={form_Handler} className='container row align-items-center'>
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="product">PRODUCT NAME:</label>
+              <label htmlFor="product" className="form_label">Produce Name: </label>
               <input
                 placeholder="Product Name"
-                name="name"
+                name="product"
                 type="product"
                 id="product"
-                className="form-control"
+                className='form-control'
                 onChange={formChange_Handler}
               />
             </div>
-          </div>
-          <div className="form-row">
             <div className="form-group">
-              <label htmlFor="expirationDate">EXPIRATION DATE:</label>
+              <label htmlFor="expirationDate" className="form_label">Produce Expiration Date: </label>
+
               <input
                 placeholder="Expiration Date"
                 name="expirationDate"
                 type="expirationDate"
                 id="expirationDate"
-                className="form-control"
+
+                className='form-control'
                 onChange={formChange_Handler}
               />
             </div>
-          </div>
-          <div className="form-row">
             <div className="form-group">
-              <label htmlFor="quantity">QUANTITY:</label>
+              <label htmlFor="quantity" className="form_label">Quantity to Sell: </label>
+
               <input
                 placeholder="quantity"
                 name="quantity"
                 type="quantity"
                 id="quantity"
-                className="form-control"
-                onChange={formChange_Handler}
-              />
-            </div>
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="price">PRICE:</label>
-              <input
-                placeholder="price"
-                name="price"
-                type="price"
-                id="price"
-                className="form-control"
-                onChange={formChange_Handler}
-              />
-            </div>
-          </div>
 
-          <div className="row justify-content-center">
-            <button type="submit" className="fakeButton_2">
-              POST GREEN
-            </button>
+                className='form-control'
+                onChange={formChange_Handler}
+              />
+            </div>
+
+            <div className="row justify-content-center m-2">
+              <button type="submit" className='fakeButton_2'>SELL MY GREEN!</button>
+            </div>
+
           </div>
         </form>
       </div>
