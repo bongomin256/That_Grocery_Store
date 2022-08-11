@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import auth from '../utils/auth';
 import { LOGIN } from '../utils/mutations';
 
+import background_JPG from "../images/LOGIN.jpg";
+
 function Login() {
 
     const [formState, setFormState] = useState({email: '', password: ''});
@@ -30,10 +32,16 @@ function Login() {
     };
 
     return (
-        <div className='d-flex row justify-content-center align-items-center'>
-            <h2>THIS IS THE LOGIN PAGE</h2>
+        <div className='d-flex row justify-content-center align-items-center div_img' style={{
+            backgroundImage: `url(${background_JPG})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+          }}>
 
-            <div className='col-md-6 form_container container'>
+            <div className='col-md-4 form_container container no_padding'>
+                <div className='form_title'>LOGIN</div>
+                <hr></hr>
                 <form onSubmit={form_Handler} className='container row align-items-center'>
                     <div className='form-row'>
                         <div className='form-group'>
