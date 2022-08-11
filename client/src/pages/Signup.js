@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
 
+import background_JPG from "../images/SIGNUP.jpg";
+
 function Signup() {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
@@ -31,8 +33,13 @@ function Signup() {
   };
 
   return (
-    <div className='d-flex row justify-content-center align-items-center'>
-
+    <div className='d-flex row justify-content-center align-items-center div_img' style={{
+      backgroundImage: `url(${background_JPG})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }}>
+      
       <div className='col-md-4 form_container container'>
       <div className='form_title'>SIGNUP</div>
       <hr></hr>

@@ -19,6 +19,10 @@ a {
   align-items: center;
 }
 
+body {
+  background-image: linear-gradient(to right, rgb(98, 175, 146), rgb(46, 190, 94));
+}
+
 li > a:hover {
   color: forestgreen;
   text-decoration: underline;
@@ -44,7 +48,6 @@ input {
 }
 
 /* ------------------ STARTING CLASS BASED CSS STYLING ------------------ */
-
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -65,6 +68,15 @@ input {
 .no_padding {
   padding: 0px;
   margin: 0px;
+}
+
+.banner_padding {
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 10vh;
 }
 
 .navItem {
@@ -90,6 +102,8 @@ input {
 .fakeButton:hover {
   background-color: var(--button_color_hover);
   text-shadow: 1px 1px 1px white;
+  border: 1px solid white;
+  color: white;
 }
 
 .fakeButton > a:hover {
@@ -100,6 +114,8 @@ input {
   display: flex;
   background-color: var(--button_color);
   border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
   border: 1px solid black;
   box-shadow: 5px 5px 5px grey;
   width: 300px;
@@ -127,23 +143,42 @@ input {
 }
 
 .form_container {
-  background-color: rgba(12, 80, 54, 0.5);
+  background-color: rgb(98, 175, 146, 0.90);
   justify-content: center;
   padding: 25px;
   margin: 10px;
   border-radius: 15px;
   opacity: 10;
-  border: 1px solid black;
-  box-shadow: 5px 5px 5px grey;
+  border: 10px solid rgb(255, 255, 255);
+  box-shadow: 8px 8px 8px black;
+  animation: fadeIn 1.25s
 }
 
 .form_title {
   font-size: 35px;
   font-weight: bold;
   text-align: center;
+  text-shadow: 2px 2px 1px grey;
+}
+
+.form_label {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px grey;
+}
+
+.div_img {
+  min-height: 100vh;
 }
 
 /* Reset on the Bootstrap row -12 margin, left and right */
 .row {
   margin: 0;
+}
+
+/* ------------------ STARTING KEYFRAMES ------------------ */
+
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
 }
