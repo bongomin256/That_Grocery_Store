@@ -8,7 +8,7 @@ import { idbPromise } from "../../utils/helpers";
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
-  const { image, name, _id, price, quantity } = item;
+  const { _id, name, expirationDate, image, price, quantity, category } = item;
 
   const { cart } = state;
 
@@ -34,9 +34,16 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
+    <div className="card px-1 py-1 ">
       <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
+        <div className='d-flex row justify-content-center align-items-center' style={{
+          backgroundImage: `${image}`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          height: '64px',
+          width: '64px'
+        }}></div>
         <p>{name}</p>
       </Link>
       <div>
