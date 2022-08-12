@@ -44,6 +44,7 @@ function OnSale() {
       (product) => product.category._id === currentCategory
     );
   }
+  console.log(state.products);
 
   return (
     <div className="my-2">

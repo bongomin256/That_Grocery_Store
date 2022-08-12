@@ -11,7 +11,7 @@ const typeDefs = gql`
     price: Float
     category: [Category]
     user: [User]
-
+  }
 
   type Order {
     _id: ID
@@ -82,7 +82,6 @@ const typeDefs = gql`
       expirationDate: String
       quantity: String
       price: String
-      userId: ID
     ): Product
   }
 `;

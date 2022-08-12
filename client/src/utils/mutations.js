@@ -32,20 +32,17 @@ export const ADD_PRODUCT = gql`
     $expirationDate: String
     $quantity: String
     $price: String
-    $userId: ID
   ) {
     addProduct(
       name: $name
       expirationDate: $expirationDate
       quantity: $quantity
       price: $price
-      userId: $userId
     ) {
       name
       expirationDate
       quantity
       price
-      userId
     }
   }
 `;
