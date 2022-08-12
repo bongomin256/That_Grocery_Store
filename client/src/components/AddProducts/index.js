@@ -12,12 +12,11 @@ function AddProducts() {
 
   const form_Handler = async (event) => {
     event.preventDefault();
-    console.log(formState);
     const mutationResponse = await addProduct({
       variables: {
         name: formState.name,
         expirationDate: formState.expirationDate,
-        price: parseInt(formState.price),
+        price: parseInt(12),
         quantity: parseInt(formState.quantity),
       },
     });

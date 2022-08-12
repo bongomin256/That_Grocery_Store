@@ -36,14 +36,23 @@ function ProductItem(item) {
   return (
     <div className="card px-1 py-1 ">
       <Link to={`/products/${_id}`}>
-        <div className='d-flex row justify-content-center align-items-center' style={{
-          backgroundImage: `${image}`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          height: '64px',
-          width: '64px'
-        }}></div>
+        <div
+          className="d-flex row justify-content-center align-items-center"
+          style={{
+            backgroundImage: `${image}`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            height: "50px",
+            width: "50px",
+          }}
+        ></div>
+        <img
+          src={image}
+          style={{
+            height: "64px",
+          }}
+        ></img>
         <p>{name}</p>
       </Link>
       <div>

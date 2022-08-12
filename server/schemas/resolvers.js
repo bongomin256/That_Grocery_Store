@@ -122,7 +122,7 @@ const resolvers = {
       if (context.user) {
         console.log(args);
         const updatedProduct = await Product.create(args);
-        return updatedUser;
+        return updatedProduct;
       }
       throw new AuthenticationError("Not logged in");
     },
