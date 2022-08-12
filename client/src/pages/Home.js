@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import homeImage from "../images/backgroundveggiepic.png";
 
 const Home = () => {
   return (
@@ -18,12 +19,21 @@ const Home = () => {
         </Link>
       </div>
       <div className="row justify-content-center">
-        <h3 className= 'col-3'>WHO WE ARE:</h3>
+        <h3 className="col-3">WHO WE ARE:</h3>
         <p className="col-5">
-        HELLO! We are 'That Grocery Store', a local Co-op that lets growers
-        (like you) buy and sell local produce!
-      </p>
+          HELLO! We are 'That Grocery Store', a local Co-op that lets growers
+          (like you) buy and sell local produce!
+        </p>
       </div>
+      <div
+        className="d-flex row justify-content-center align-items-center div_img"
+        style={{
+          backgroundImage: `url(${homeImage})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      ></div>
     </div>
   );
 };

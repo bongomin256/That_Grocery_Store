@@ -27,16 +27,31 @@ export const ADD_ORDER = gql`
 `;
 
 export const ADD_PRODUCT = gql`
-  mutation addProduct($products: [ID]!) {
-    addProduct(products: $products) {
-      purchaseDate
-      products {
-        _id
-        name
-        expirationDate
-        price
-        quantity
-      }
+  mutation addProduct(
+    $name: String
+    $expirationDate: String
+    $description: String
+    $quantity: Int
+    $price: Float
+    $user: String
+    $category: String
+  ) {
+    addProduct(
+      name: $name
+      expirationDate: $expirationDate
+      description: $description
+      quantity: $quantity
+      price: $price
+      user: $user
+      category: $category
+    ) {
+      name
+      expirationDate
+      description
+      quantity
+      price
+      user
+      category
     }
   }
 `;

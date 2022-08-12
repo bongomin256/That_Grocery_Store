@@ -1,24 +1,52 @@
-# That_Grocery_Store
+<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react"/> <img src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
 
-[![GitHub followers](https://img.shields.io/github/followers/Nmenotti20?label=Follow&style=social)](https://github.com/crumwj22/busy-parents.git)
-<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
-<img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
-<img src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white"/> <img src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
+# That Grocery Store
+
+## University of Washington, Full Stack Coding Bootcamp
+
+### Group Project #3
+
+### Vladimir Berka, Jesse Crumley, Nathan Kilcrease, Godfrey Bongomin
 
 ## TABLE OF CONTENTS
 
-- [That_Grocery_Store Home](#that-grocery-store)
 - [Project Description](#project-description)
 - [User Story](#user-story)
-- [Project Requirements](#project-requirements)
-- [Deployed Links](#deployed-links)
-- [New Tech](#new-tech)
-- [Screenshots](#screenshots)
+- [Links](#links)
 - [Contributions and Roles](#contributions-and-roles)
+- [Screenshot](#screenshot)
 
-## PROJECT DESCRIPTION
+## ASSIGNMENT DESCRIPTION
 
-This web application allows users to create an account, and use that account to search for local farmers that want to sell their produce. As a farmer you will be able to list and sell your produce locally.
+This is a Full Stack Web Development *group project* for the UW Bootcamp. The goal of the project is to create a fully function full stack web application using all technologies learned to date. Particularly those technologies contained within the *MERN* stack (MongoDB, Express, React, Node)
+
+Some technoligies include `HTML`, `CSS`, `JavaScript`, `Bootstrap`, `Node.JS`, `Express.JS`, `.env`, `React.JS`, `JSX`, `Stripe`
+
+This project stresses equal importance between project management and web development. A development process shall be identified and agreed upon to assist with pushing code, pulling code, and merging code conflicts on GitHub. This process shall include the division of labor and tasks.
+
+A mockup / wireframe shall be created by an individual within the project team and used as a visual goal. (`UI/UX`)
+
+A project user story and acceptance criterai shall be created by the project  team and used as a functionality goal (`Product Manager/Owner`)
+
+Project management shall be `Agile` and augmented with `Kanban` style organization: with individual tasks divided, assigned, and tracked.
+
+The group developed user story, acceptance criteria, and mockup for the assignment are copied to the end of this document. 
+
+## PROJECT SCOPE
+
+DIGITAL MARKETPLACE - GROCERIES!!
+Create a full stack web page application that allows restaurant customers to view a compilation of vegetables (greens) for sale in their area (by default: Seattle).
+This web application allows users to create an account to serve two user bases: consumers who want to purchase goods, and producers who want to sell their goods.
+Consumers will be allowed to view and add goods to a shopping cart for final purchase using `Stripe`
+Producers will be allowed to add goods for sale
+
+State and storage is handled with React's built in `useState` and `storeContext`
+
+No starting code has been provided - HOWEVER THERE ARE USEFUL EXAMPLES FROM PREVIOUS CLASS ACTIVITIES THAT HAVE SIMILAR FUNCTIONALITY
+
+No guidance, project choices, or project direction has been provided.
+
+# ORIGINAL PROJECT DETAILS
 
 ## USER STORY:
 
@@ -30,66 +58,79 @@ I want to be able to list my produce to sell,
 AS a buyer I want to be able to see an expiration date and price.
 ```
 
-## DEPLOYED LINKS
+## ACCEPTANCE CRITERIA
 
-- [VIEW LIVE APP]()
+```md
+GIVEN A digital marketplace for buying and selling produce
+
+WHEN I visit the site for the first time
+THEN I am presented with options to sell, buy, and view all produce for sale
+WHEN I click on "sell your greens" 
+THEN I am asked to login if not already
+WHEN I click on "sell your greens" & "am logged in"
+THEN I am routed to a form to add produce to sell
+WHEN I click "SUBMIT" on the form
+THEN I am able to see the new produce on the "view all produce" page
+WHEN I click on "buy your greens"
+THEN I am asked to login if not already
+WHEN I click on "buy your greens" & "am logged in"
+THEN I am routed to a list of all produce for sale
+WHEN I click on "view all produce"
+THEN I am am routed to a list of all produce for sale
+WHEN I view all produce
+THEN I am able to filter based on criteria (category, location, etc)
+WHEN I click on produce I wish to purchase
+THEN I see it is added to a digital cart
+WHEN I click on "PURCHASE" in the cart
+THEN I am re-directed to `Stripe` to add my credit card information
+```
+
+## MIRO MOCKUPS
+
+![Full Miro Mockup](./client/src/images/MIRO_Full_Board.png "Full Functionality Mockup, Miro Screenshot")
+
+![Landing Page Mockup](./client/src/images/MIRO_HomePage.png "Landing Page Mockup, Miro Screenshot")
+
+## URL TO THE GITHUB REPOSITORY
+
 - [GITHUB](https://github.com/bongomin256/That_Grocery_Store)
 
-## NEW TECH
+## URL TO THE HEROKU HOSTED APPLICATION
 
-- ???
-- ???
+- [VIEW LIVE APP](https://that-grocery-store.herokuapp.com/)
 
 ## CONTRIBUTIONS AND ROLES
 
-- Vlad Berka: React Components, React Pages, CSS [Github](https://github.com/vlad-berka)
-- Jesse Crumley: Mutations, Reducers, Resolvers, TypeDefs, Stripe [Github](https://github.com/crumwj22)
+- Vlad Berka: React Components, React Pages, CSS, General De-bugging and assistance w/ others [Github](https://github.com/vlad-berka)
 - Godfrey Bongomin: Actions, Auth, GlobalState, Helpers, Queries, Stripe [Github](https://github.com/bongomin256)
 - Nathan Kilcrease: Reducers, Models, Schemas, Mongoose [Github](https://github.com/batemanz)
-
-## PROJECT REQUIREMENTS
-
-You and your group will use everything you’ve learned over the past six units to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
-
-- Use Node.js and Express.js to create a RESTful API.
-
-- Use Handlebars.js as the template engine.
-
-- Use MySQL and the Sequelize ORM for the database.
-
-- Have both GET and POST routes for retrieving and adding new data.
-
-- Use at least one new library, package, or technology that we haven’t discussed.
-
-- Have a folder structure that meets the MVC paradigm.
-
-- Include authentication (express-session and cookies).
-
-- Protect API keys and sensitive information with environment variables.
-
-- Be deployed using Heroku (with data).
-
-- Have a polished UI.
-
-- Be responsive.
-
-- Be interactive (i.e., accept and respond to user input).
-
-- Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-
-- Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-## LINKS
-
-- [VIEW LIVE APP](https://busy-parents-jesse.herokuapp.com/)
-- [GITHUB](https://github.com/crumwj22/busy-parents)
-- [Presentation](https://docs.google.com/presentation/d/1WrR44cODTPc2Ap5P2igxyeic0ZbPdbht6NdSQuw5G1M/edit#slide=id.g13237d46563_0_7)
-
-## NEW TECH
-
-- Animate: https://animate.style/
-- W3Schools css framework: https://www.w3schools.com/w3css/default.asp
+- Jesse Crumley: Mutations, Reducers, Resolvers, TypeDefs, Stripe [Github](https://github.com/crumwj22)
 
 ## SCREENSHOT
 
-- <img src="assets/busy-parents-login.png" width="300px">
+<img src="client/src/images/TGS.png" width="300px">
+
+
+## License
+
+MIT License
+
+Copyright (c) [2022] [Vlad Berka, Jesse Crumley, Nathan Kilcrease, Godfrey Bongomin]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

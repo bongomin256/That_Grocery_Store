@@ -6,6 +6,8 @@ import { useQuery } from "@apollo/client";
 import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 
+import ProductItem from "../ProductItem";
+
 function OnSale() {
   const [state, dispatch] = useStoreContext();
   // const [state, setState] = useState({ products: [] });
@@ -42,6 +44,7 @@ function OnSale() {
       (product) => product.category._id === currentCategory
     );
   }
+  console.log(state.products);
 
   return (
     <div className="my-2">
@@ -49,7 +52,16 @@ function OnSale() {
       {state.products.length ? (
         <div className="flex-row">
           {filterProducts().map((product) => (
-            <p key={product.name}>{product.name}</p>
+            <ProductItem
+              key={product._id}
+              name={product.name}
+              expirationDate={product.expirationDate}
+              image={product.image}
+              description={product.description}
+              price={product.price}
+              quantity={product.quantity}
+              category={product.category}
+            />
           ))}
         </div>
       ) : (

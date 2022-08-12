@@ -8,6 +8,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       expirationDate
       quantity
       price
+      image
     }
   }
 `;
