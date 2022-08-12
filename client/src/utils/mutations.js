@@ -30,19 +30,28 @@ export const ADD_PRODUCT = gql`
   mutation addProduct(
     $name: String
     $expirationDate: String
-    $quantity: String
-    $price: String
+    $description: String
+    $quantity: Int
+    $price: Float
+    $user: String
+    $category: String
   ) {
     addProduct(
       name: $name
       expirationDate: $expirationDate
+      description: $description
       quantity: $quantity
       price: $price
+      user: $user
+      category: $category
     ) {
       name
       expirationDate
+      description
       quantity
       price
+      user
+      category
     }
   }
 `;

@@ -18,6 +18,9 @@ function AddProducts() {
         expirationDate: formState.expirationDate,
         price: parseInt(12),
         quantity: parseInt(formState.quantity),
+        description: "test description",
+        user: "62f59673390910e8beacc0fa",
+        category: "62f59673390910e8beacc0f5",
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -87,6 +90,20 @@ function AddProducts() {
                 name="quantity"
                 type="quantity"
                 id="quantity"
+                className="form-control"
+                onChange={formChange_Handler}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="quantity" className="form_label">
+                Price:{" "}
+              </label>
+
+              <input
+                placeholder="price"
+                name="price"
+                type="price"
+                id="price"
                 className="form-control"
                 onChange={formChange_Handler}
               />
