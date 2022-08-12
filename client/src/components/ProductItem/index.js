@@ -43,8 +43,8 @@ function ProductItem(item) {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
-            height: "50px",
-            width: "50px",
+            height: "64px",
+            width: "64px",
           }}
         ></div>
         <img
