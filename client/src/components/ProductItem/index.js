@@ -8,7 +8,7 @@ import { idbPromise } from "../../utils/helpers";
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
-  const { _id, name, expirationDate, image, price, quantity, category } = item;
+  const { _id, name, description, expirationDate, image, price, quantity, category, user } = item;
 
   const { cart } = state;
 
@@ -34,34 +34,30 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1 ">
-      <Link to={`/products/${_id}`}>
-        <div
-          className="d-flex row justify-content-center align-items-center"
-          style={{
-            backgroundImage: `${image}`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            height: "64px",
-            width: "64px",
-          }}
-        ></div>
-        <img
-          src={image}
-          style={{
-            height: "64px",
-          }}
-        ></img>
-        <p>{name}</p>
-      </Link>
-      <div>
-        <div>
-          {quantity} {pluralize("item", quantity)} in stock
+    <div className="d-flex row custom_card">
+        <div className="d-flex row justify-content-center align-items-center col-5">
+          <img src={image} style={{ height: "150px", width: "200px"}}></img>
         </div>
-        <span>${price}</span>
+      <div className="row col-7 justify-content-center align-items-center align-text-center">
+        <div className="text_2">
+          {name} 
+        </div>
+        <p className="text_1">
+          "{description}"
+        </p>
+        <div>
+          <span className="text_3">Expires:</span> {expirationDate} with <span className="text_3">{quantity} {pluralize("item", quantity)}</span> in stock
+        </div>
+        <div>
+          {category} 
+        </div>
+        <br></br>
+        <div>
+          Sold by: {user} 
+        </div>
+        <br></br>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <button className="fakeButton extra_padding_top" onClick={addToCart}>Add to cart (${price}) </button>
     </div>
   );
 }
