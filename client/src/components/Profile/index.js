@@ -1,68 +1,52 @@
 import React, { useEffect } from "react";
 import ProductItem from "../ProductItem";
 import { useStoreContext } from "../../utils/GlobalState";
-import { UPDATE_PRODUCTS } from "../../utils/actions";
+import { UPDATE_USER } from "../../utils/actions";
 import { useQuery } from "@apollo/client";
-import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
+import { QUERY_ALL_PRODUCTS, QUERY_USER } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 
-function ProductList() {
+function Profile() {
   const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;
 
-  const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
+  const { loading, data } = useQuery(QUERY_USER);
 
   useEffect(() => {
     if (data) {
+      console.log("Data found: ", data);
       dispatch({
-        type: UPDATE_PRODUCTS,
-        products: data.products,
+        type: UPDATE_USER,
+        user: data.user,
       });
-      data.products.forEach((product) => {
-        idbPromise("products", "put", product);
-      });
+
+        idbPromise("user", "put", data.user);
+
     } else if (!loading) {
-      idbPromise("products", "get").then((products) => {
+      idbPromise("user", "get").then((user) => {
         dispatch({
-          type: UPDATE_PRODUCTS,
-          products: products,
+          type: UPDATE_USER,
+          user: user,
         });
       });
     }
   }, [data, loading, dispatch]);
 
-  function filterProducts() {
-    if (!currentCategory) {
-      return state.products;
-    }
-
-    return state.products.filter(
-      (product) => product.category._id === currentCategory
-    );
-  }
+  // console.log(data);
 
   return (
     <div className="my-2">
-      <h2>Our Products:</h2>
-      {state.products.length ? (
+      <h2>USER:</h2>
+
         <div className="flex-row">
-          {filterProducts().map((product) => (
-            <ProductItem
-              key={product._id}
-              _id={product._id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              quantity={product.quantity}
-            />
-          ))}
+
+        {/* <p>Email:{state.user.email}</p> */}
+
         </div>
-      ) : (
-        <h3>You haven't added any products yet!</h3>
-      )}
+
     </div>
   );
 }
 
-export default ProductList;
+export default Profile;

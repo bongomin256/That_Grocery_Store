@@ -8,6 +8,10 @@ import { idbPromise } from "../../utils/helpers";
 
 import ProductItem from "../ProductItem";
 
+import background_JPG from "../../images/LOGIN.jpg";
+
+
+
 function OnSale() {
   const [state, dispatch] = useStoreContext();
   // const [state, setState] = useState({ products: [] });
@@ -47,10 +51,12 @@ function OnSale() {
   console.log(state.products);
 
   return (
-    <div className="my-2">
-      <h2>Our Products:</h2>
+    <div className="my-2 d-flex justify-content-center" style={{}}>
+      <h2 className="form_title">Our Products:</h2>
+      <br></br>
+      <hr></hr>
       {state.products.length ? (
-        <div className="flex-row">
+        <div className="flex-row col-11">
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

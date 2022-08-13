@@ -6,6 +6,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       _id
       name
       expirationDate
+      description
       quantity
       price
       image
