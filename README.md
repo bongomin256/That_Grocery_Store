@@ -51,11 +51,16 @@ No guidance, project choices, or project direction has been provided.
 ## USER STORY:
 
 ```md
-AS a consumer I want to buy locally grown produce,
-AS a seller I want to be able to sell my produce to local customers,
-I want to see a list of produce that I can buy,
-I want to be able to list my produce to sell,
-AS a buyer I want to be able to see an expiration date and price.
+AS A consumer
+I WANT to buy locally grown produce,
+I WANT to see a list of produce online that I can buy,
+SO THAT I can eat healthy foods while supporting my community
+
+AS A producer
+I WANT to be able to sell my produce to local customers,
+I WANT to be able to list and see my produce to sell,
+SO THAT I can sell my goods to local consumers
+
 ```
 
 ## ACCEPTANCE CRITERIA
@@ -101,7 +106,7 @@ THEN I am re-directed to `Stripe` to add my credit card information
 
 ## CONTRIBUTIONS AND ROLES
 
-- Vlad Berka: React Components, React Pages, CSS, General De-bugging and assistance w/ others [Github](https://github.com/vlad-berka)
+- Vlad Berka: React Components, React Pages, CSS, README, Presentation General De-bugging and assistance w/ others [Github](https://github.com/vlad-berka)
 - Godfrey Bongomin: Actions, Auth, GlobalState, Helpers, Queries, Stripe [Github](https://github.com/bongomin256)
 - Nathan Kilcrease: Reducers, Models, Schemas, Mongoose [Github](https://github.com/batemanz)
 - Jesse Crumley: Mutations, Reducers, Resolvers, TypeDefs, Stripe [Github](https://github.com/crumwj22)
