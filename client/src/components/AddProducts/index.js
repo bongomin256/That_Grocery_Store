@@ -16,11 +16,11 @@ function AddProducts() {
       variables: {
         name: formState.name,
         expirationDate: formState.expirationDate,
-        price: parseInt(12),
+        price: parseInt(formState.price),
         quantity: parseInt(formState.quantity),
-        description: "test description",
-        user: "62f59673390910e8beacc0fa",
-        category: "62f59673390910e8beacc0f5",
+        description: formState.description,
+        user: formState.user,
+        category: formState.category,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -95,7 +95,7 @@ function AddProducts() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="quantity" className="form_label">
+              <label htmlFor="price" className="form_label">
                 Price:{" "}
               </label>
 

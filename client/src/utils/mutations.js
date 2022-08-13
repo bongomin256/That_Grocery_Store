@@ -32,7 +32,7 @@ export const ADD_PRODUCT = gql`
     $expirationDate: String
     $description: String
     $quantity: Int
-    $price: Float
+    $price: String
     $user: String
     $category: String
   ) {
